@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/markedjs/html-differ/compare/v3.0.4...v4.0.0) (2021-11-28)
+
+
+### Bug Fixes
+
+* move to esm ([#144](https://github.com/markedjs/html-differ/issues/144)) ([01ffb6d](https://github.com/markedjs/html-differ/commit/01ffb6df8aaa9f9672f37e11b13e3db124d934aa))
+
+
+### BREAKING CHANGES
+
+* some default exports changed to named exports.
+
 ## [3.0.4](https://github.com/markedjs/html-differ/compare/v3.0.3...v3.0.4) (2020-11-09)
 
 
