@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/markedjs/html-differ/compare/v4.0.0...v4.0.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* avoid memory leak and concurrency issues ([#157](https://github.com/markedjs/html-differ/issues/157)) ([b5f8c58](https://github.com/markedjs/html-differ/commit/b5f8c58e21af3f264ccf45e6f52abeebd601b3f1))
+
 # [4.0.0](https://github.com/markedjs/html-differ/compare/v3.0.4...v4.0.0) (2021-11-28)
 
 
