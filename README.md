@@ -1,10 +1,8 @@
 # html-differ
 [![Build Status](https://github.com/markedjs/html-differ/workflows/CI/badge.svg)](https://github.com/markedjs/html-differ/actions)
 [![Install Size](https://packagephobia.now.sh/badge?p=@markedjs/html-differ)](https://packagephobia.now.sh/result?p=@markedjs/html-differ)
-[![Dependency Status](https://david-dm.org/markedjs/html-differ.svg)](https://david-dm.org/markedjs/html-differ)
-[![devDependency Status](https://david-dm.org/markedjs/html-differ/dev-status.svg)](https://david-dm.org/markedjs/html-differ?type=dev)
 
-Compares two HTML.
+Compares two HTML strings.
 
 <!-- TOC -->
 - [The comparison algorithm](#the-comparison-algorithm)
@@ -102,8 +100,8 @@ $ npm install @markedjs/html-differ
 ### HtmlDiffer
 
 ```js
-var HtmlDiffer = require('@markedjs/html-differ').HtmlDiffer,
-    htmlDiffer = new HtmlDiffer(options);
+import { HtmlDiffer } from '@markedjs/html-differ';
+const htmlDiffer = new HtmlDiffer(options);
 ```
 
 where `options` is an object.
@@ -282,15 +280,15 @@ For example, the following two code samples will be considered to be equivalent:
 Passing of a preset via the constructor:
 
 ```js
-var HtmlDiffer = require('@markedjs/html-differ').HtmlDiffer,
-    htmlDiffer = new HtmlDiffer('bem');
+import { HtmlDiffer } from '@markedjs/html-differ';
+const htmlDiffer = new HtmlDiffer('bem');
 ```
 
 Redefinition of a preset via the constructor:
 
 ```js
-var HtmlDiffer = require('@markedjs/html-differ').HtmlDiffer,
-    htmlDiffer = new HtmlDiffer({ preset: 'bem', ignoreAttributes: [] });
+import { HtmlDiffer } from '@markedjs/html-differ';
+const htmlDiffer = new HtmlDiffer({ preset: 'bem', ignoreAttributes: [] });
 ```
 
 #### Methods
@@ -311,7 +309,7 @@ var HtmlDiffer = require('@markedjs/html-differ').HtmlDiffer,
 ### Logger
 
 ```js
-var logger = require('@markedjs/html-differ/lib/logger');
+import * as logger from '@markedjs/html-differ/lib/logger';
 ```
 
 #### Methods
@@ -339,22 +337,22 @@ var logger = require('@markedjs/html-differ/lib/logger');
 ### Example
 
 ```js
-var fs = require('fs'),
-    HtmlDiffer = require('@markedjs/html-differ').HtmlDiffer,
-    logger = require('@markedjs/html-differ/lib/logger');
+import fs from 'fs';
+import { HtmlDiffer } from '@markedjs/html-differ';
+import * as logger from '@markedjs/html-differ/lib/logger';
 
-var html1 = fs.readFileSync('1.html', 'utf-8'),
-    html2 = fs.readFileSync('2.html', 'utf-8');
+const html1 = fs.readFileSync('1.html', 'utf-8');
+const html2 = fs.readFileSync('2.html', 'utf-8');
 
-var options = {
-        ignoreAttributes: [],
-        compareAttributesAsJSON: [],
-        ignoreWhitespaces: true,
-        ignoreComments: true,
-        ignoreEndTags: false
-    };
+const options = {
+  ignoreAttributes: [],
+  compareAttributesAsJSON: [],
+  ignoreWhitespaces: true,
+  ignoreComments: true,
+  ignoreEndTags: false
+};
 
-var htmlDiffer = new HtmlDiffer(options);
+const htmlDiffer = new HtmlDiffer(options);
 
 async function run() {
   const diff = await htmlDiffer.diffHtml(html1, html2);
@@ -405,11 +403,11 @@ Study the following file `config.json`:
 
 ```js
 {
-    "ignoreAttributes": [],
-    "compareAttributesAsJSON": [],
-    "ignoreWhitespaces": true,
-    "ignoreComments": true,
-    "ignoreEndTags": false
+  "ignoreAttributes": [],
+  "compareAttributesAsJSON": [],
+  "ignoreWhitespaces": true,
+  "ignoreComments": true,
+  "ignoreEndTags": false
 }
 ```
 
