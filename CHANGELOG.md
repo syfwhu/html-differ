@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/markedjs/html-differ/compare/v4.0.1...v4.0.2) (2022-04-24)
+
+
+### Bug Fixes
+
+* update all deps ([#163](https://github.com/markedjs/html-differ/issues/163)) ([8e6fb1c](https://github.com/markedjs/html-differ/commit/8e6fb1c88abd395832c07a930371b3559cd438f1))
+
 ## [4.0.1](https://github.com/markedjs/html-differ/compare/v4.0.0...v4.0.1) (2022-03-12)
 
 
